@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speed and Distance Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Speed and Distance Game</h1>
+    
+    <div id="tutorial">
+        <h2>How to Play:</h2>
+        <p>In this game, you'll be asked questions about speed, distance, and time.</p>
+        <p>Answer the questions correctly to score points. You have 30 seconds for each question. Try to complete as many levels as possible!</p>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game" style="display: none;">
+        <p id="question">Loading...</p>
+        <input type="text" id="userAnswer" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Submit Answer</button>
+
+        <div id="timer">Time Left: <span id="timerValue">30</span> seconds</div>
+        <div id="score">Score: 0</div>
+        <div id="level">Level: 1</div>
+        <div id="progressBarContainer">
+            <progress id="progressBar" value="0" max="30"></progress>
+        </div>
+    </div>
+
+    <div id="gameOver" style="display: none;">
+        <h2>Game Over!</h2>
+        <p>Your final score is: <span id="finalScore"></span></p>
+        <button onclick="restartGame()">Restart Game</button>
+    </div>
+
+    <div id="musicControls">
+        <button onclick="toggleMusic()">Toggle Music</button>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
